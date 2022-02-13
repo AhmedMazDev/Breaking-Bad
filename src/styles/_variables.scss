@@ -1,10 +1,11 @@
-// make a new font with font-face
-@font-face {
-  font-family: "breakingBad";
-  src: local("breakingBad"), url("../fonts/breaking.ttf") format("truetype");
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Mono&family=Zilla+Slab:wght@700;300&display=swap');@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/impact.ttf') format('truetype');
 }
 
 $color-primary: #171617;
 $color-secondary: #e21a1a;
-$color-accent: #ef5533;
-$font-family: "breakingBad";
+$color-accent: #014F2A;
+$font-primary: "Cambria";
+$font-secondary: "Impact";
+$font-accent:"Zilla Slab";

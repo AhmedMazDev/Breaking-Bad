@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 .character {
   width: 200px;
   height: 300px;
   border: 3px solid variables.$color-accent;
-  font-family: variables.$font-family;
   position: relative;
   margin: 1rem;
+  cursor : pointer;
+  box-shadow: 1px  1px 30px 10px rgba(0,0,0,0.5);
 
-  img {
+  > img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -15,10 +16,123 @@
     object-fit: cover;
   }
 
-  h1 {
+  h2 {
     position: absolute;
-    bottom: 4rem;
+    bottom: 2rem;
     color: white;
-    font-family: "Roboto", sans-seri;
+    font-family:  variables.$font-accent;
+    padding: .3rem 0;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    font-weight: 300;
+    }
+
+}
+
+.characterDetails {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  color: white;
+  cursor: default;
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease-in-out;
+    }
   }
+
+  .content {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .nickname {
+    position: fixed;
+    font-size: 4rem;
+    left: 0;
+    top: 25%;
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .profile {
+    img {
+      width: 400px;
+      object-fit: contain;
+    }
+    
+    > h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 50%;
+    width: 80%;
+    margin-left:5rem;
+
+    .characterName{
+      font-family: variables.$font-secondary;
+      font-size: 5rem;
+      font-weight: normal;
+    }
+
+    h3{
+      font-family: variables.$font-primary;
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+
+    .deathCount {
+      color: red;
+    }
+
+    p{
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+
+    button{
+      align-self: flex-start;
+      border:none;
+      color:white;
+      background-color:variables.$color-accent;
+      padding: 0.5rem 1.5rem;
+      font-weight: 400;
+      transition: all 300ms;
+      cursor: pointer;
+      font-size: 1rem;
+      &:active{
+        transform: translateY(5px);
+      }
+    }
+  }
+
 }

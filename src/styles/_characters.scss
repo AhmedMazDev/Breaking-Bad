@@ -1,0 +1,15 @@
+.characters {
+    display: flex;
+    flex-direction: column;
+    .charactersList{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .title{
+        text-align: center;
+        color: white;
+        font-size: 6rem;
+        font-family: variables.$font-accent;
+      }
+}
