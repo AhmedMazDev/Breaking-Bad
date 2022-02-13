@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.character {
+  width: 200px;
+  height: 300px;
+  border: 3px solid variables.$color-accent;
+  font-family: variables.$font-family;
+  position: relative;
+  margin: 1rem;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    position: absolute;
+    bottom: 4rem;
+    color: white;
+    font-family: "Roboto", sans-seri;
+  }
+}
